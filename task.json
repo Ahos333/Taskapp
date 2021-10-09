@@ -1,0 +1,19 @@
+{
+  "task": [
+    {
+      "id": 1,
+      "name": "Clean",
+      "description": "Tidy Up bathroom and bedroom"
+    },
+    {
+      "id": 2,
+      "name": "Wash the dishes",
+      "description": "Scrub each and every pan"
+    },
+    {
+      "id": 3,
+      "name": "Take out trash",
+      "description": "Collect all trash and recycling"
+    }
+  ]
+}
