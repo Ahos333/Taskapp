@@ -2,18 +2,18 @@
   "task": [
     {
       "id": 1,
-      "name": "Clean",
-      "description": "Tidy Up bathroom and bedroom"
+      "name": "Clean"
     },
     {
       "id": 2,
-      "name": "Wash the dishes",
-      "description": "Scrub each and every pan"
+      "name": "Wash the dishes"
     },
     {
       "id": 3,
-      "name": "Take out trash",
-      "description": "Collect all trash and recycling"
+      "name": "Take out trash"
+    },
+    {
+      "id": 4
     }
   ]
 }
