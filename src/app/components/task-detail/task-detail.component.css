@@ -1,0 +1,17 @@
+div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10rem 0;
+}
+
+.task-number {
+    font-weight: bold;
+    margin-right: 0.3rem;
+} 
+
+.task-name {
+    font-size: 2rem;
+}

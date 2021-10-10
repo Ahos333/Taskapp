@@ -24,19 +24,21 @@ export class TaskDataService {
     return this.http.get<Task>(this.taskUrl+"/"+id);
   }
 
-  taskDeleted(taskList: Task): Observable<Task> {
-    const url = `${this.taskUrl}/${taskList.id}`;
-    return this.http.delete<Task>(this.taskUrl);
+  taskDeleted(task: Task): Observable<Task> {
+    const url = `${this.taskUrl}/${task.id}`;
+    return this.http.delete<Task>(url);
   }
 
-/*
-  addTask = (): Observable<Task> {
-    return this.http.post<Task>(this.taskUrl, taskList, httpOptions);
+
+  addTask(task: Task):Observable<Task> {
+    return this.http.post<Task>(this.taskUrl, task, httpOptions);
   }
 
+  /*
   deleteTask(taskList: Task): Observable<Task> {;
     return this.http.delete<Task>(this.taskUrl, taskList, httpOptions);
   }
-*/
+  */
+
   constructor( private http: HttpClient) { }
 }

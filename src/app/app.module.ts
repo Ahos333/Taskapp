@@ -7,12 +7,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TaskListComponent } from './components/task-list/task-list.component';
 import { TaskDetailComponent } from './components/task-detail/task-detail.component';
+import { ButtonComponent } from './components/button/button.component';
+import { NewTaskComponent } from './components/new-task/new-task.component';
+import { DeleteBtnComponent } from './components/delete-btn/delete-btn.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TaskListComponent,
-    TaskDetailComponent
+    TaskDetailComponent,
+    ButtonComponent,
+    NewTaskComponent,
+    DeleteBtnComponent
   ],
   imports: [
     BrowserModule,

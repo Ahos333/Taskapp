@@ -1,25 +1,18 @@
 <div class="container">
     <div class="app-container">
         <header class="header">Task App</header>
-        <div class="add-tasks">
-            <label for="addTask">Tasks:</label>
-            <input type="text"  placeholder="Tasks..."  >
-            <button class="add-btn" type="submit" (click)="onTaskAdd()">Add Task</button>
-        </div>
+        <app-new-task (onAddTask)="addTask($event)"></app-new-task>
         <ul class="task-list">
             <li *ngFor="let t of taskList">
-                <a class="name" [routerLink] = "['/details', t.id]">{{ t.id }}. {{ t.name }}</a>
-                <button class="btn read-btn">Read</button>
-                <button class="btn delete-btn" (click)="onTaskDeleted(t.id)">Delete</button>
+                <p class="integer">{{ t.id }}.</p>
+                <a class="name" [routerLink] = "['/details', t.id]">{{ t.name }}</a>
+                <button class="btn read-btn" [routerLink] = "['/details', t?.id]">Read</button>
+                <app-delete-btn (click)="onTaskDeleted(t?.id)">Delete</app-delete-btn>
             </li>
         </ul>
     </div>
 </div>
 
-
-
-<!--
-    [(ngModel)]="t.name"
-    (click)="addTask(taskList)"
-    (ngSumbit)="onSubmit()"
+<!-- Working Code
+    (onDeleteTask)="deleteTask($event)"
 -->
