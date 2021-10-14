@@ -24,11 +24,10 @@ export class TaskDataService {
     return this.http.get<Task>(this.taskUrl+"/"+id);
   }
 
-  taskDeleted(task: Task): Observable<Task> {
+  deleteTask(task: Task): Observable<Task> {
     const url = `${this.taskUrl}/${task.id}`;
     return this.http.delete<Task>(url);
   }
-
 
   addTask(task: Task):Observable<Task> {
     return this.http.post<Task>(this.taskUrl, task, httpOptions);

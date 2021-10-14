@@ -10,7 +10,7 @@ export class NewTaskComponent implements OnInit {
   id: number;
   name: string;
   constructor() { }
-
+  task: Task[]
   ngOnInit(): void {
   }
 

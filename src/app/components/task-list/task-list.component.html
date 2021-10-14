@@ -7,7 +7,7 @@
                 <p class="integer">{{ t.id }}.</p>
                 <a class="name" [routerLink] = "['/details', t.id]">{{ t.name }}</a>
                 <button class="btn read-btn" [routerLink] = "['/details', t?.id]">Read</button>
-                <app-delete-btn (click)="onTaskDeleted(t?.id)">Delete</app-delete-btn>
+                <app-delete-btn (click)="deleteTask(t)">Delete</app-delete-btn>
             </li>
         </ul>
     </div>
