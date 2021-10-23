@@ -6,13 +6,11 @@
             <li *ngFor="let t of taskList">
                 <p class="integer">{{ t.id }}.</p>
                 <a class="name" [routerLink] = "['/details', t.id]">{{ t.name }}</a>
-                <button class="btn read-btn" [routerLink] = "['/details', t?.id]">Read</button>
+                <button class="btn view-btn" [routerLink] = "['/details', t?.id]">View</button>
+                <app-edit-task (click)="editTask(t)">Edit</app-edit-task>
                 <app-delete-btn (click)="deleteTask(t)">Delete</app-delete-btn>
             </li>
         </ul>
     </div>
 </div>
 
-<!-- Working Code
-    (onDeleteTask)="deleteTask($event)"
--->

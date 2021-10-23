@@ -35,6 +35,9 @@ export class TaskListComponent implements OnInit {
     }
   }
 */
+  editTask(task: Task) {
+    this.taskData.editTask(task).subscribe((task) => (this.taskList.find((t) => t.id == task.id)));
+  }
 
   deleteTask(task: Task)  {
     this.taskData
@@ -43,6 +46,8 @@ export class TaskListComponent implements OnInit {
         () => (this.taskList = this.taskList.filter((t) => t.id !== task.id))
       );
   }
+
+  
   
 
 

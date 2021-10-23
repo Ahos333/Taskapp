@@ -21,7 +21,7 @@
     padding: 0 1rem;
     background: #f4f4f4;
     display: grid;
-    grid-template: 1fr / 0.1fr 1fr 0.1fr 0.1fr;
+    grid-template: 1fr / 0.1fr 1fr 0.1fr 0.1fr 0.1fr;
     justify-content: none;
     align-items: center;
     /*
@@ -51,11 +51,14 @@
 }
 
 
-.read-btn {
+.view-btn {
     background: rgb(30, 30, 201); 
 }
 
-.read-btn:hover {
+.view-btn:hover {
     background: rgb(46, 46, 236); 
 }
+
+
+
 
