@@ -22,22 +22,6 @@ export class TaskListComponent implements OnInit {
   addTask(task: Task) {
     this.taskData.addTask(task).subscribe((task) => (this.taskList.push(task)));
   }
-/*
-  deleteTask(taskId) {
-    let taskIndex = 0;
-    
-    for(let taskList of this.taskList) {
-      if(taskList.id === taskId) {
-        this.taskList.splice(taskIndex, 1);
-        break;
-      }
-      taskIndex++;
-    }
-  }
-*/
-  editTask(task: Task) {
-    this.taskData.editTask(task).subscribe((task) => (this.taskList.find((t) => t.id == task.id)));
-  }
 
   deleteTask(task: Task)  {
     this.taskData
@@ -47,53 +31,10 @@ export class TaskListComponent implements OnInit {
       );
   }
 
-  
-  
-
-
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
 
   
-  /*
 
-  deleteTask(task: Task) {
-        this.taskData.deleteTask(task).subscribe((taskId) => (this.taskList = this.taskList.filter((t) => t.id !== task.id)));
-        //this.taskList.splice(taskIndex, 1);
-    
-  }
-
-  this.taskData.deleteTask(task).subscribe(() => (this.taskList = this.taskList.filter((t) => t.id !== task.id)));
-  this.taskData.deleteTask(task).subscribe((taskId) => (this.taskList.splice(taskIndex, 1)));
-  */
-  /*
-  onTaskDeleted(taskId) {
-    this.taskData.deleteTask(taskId).subscribe((taskId) => (this.taskList.splice(taskIndex, 1)));
-
-    let taskIndex = 0;
-    
-    for(let taskList of this.taskList) {
-      if(taskList.id === taskId) {
-        
-        //this.taskList.splice(taskIndex, 1);
-        break;
-      }
-      taskIndex++;
-    }
-  }
-*/
-
-
-  /*
-  deleteTask(task: Task) {
-    this.taskData
-    .taskDeleted(task)
-    .subscribe(
-      () => (this.taskList = this.taskList.filter((t) => t.id !==
-      task.id))
-    )};
-  */
   
 
 }

@@ -1,4 +1,7 @@
-<div>
-    <h1 class="task-number">{{ myTask?.id }}.</h1>
-    <p class="task-name">Task: {{ myTask?.name }}</p>
+<div class="task-container">
+    <div class="detail-container">
+        <h1 class="task-number">{{ myTask?.id }}.</h1>
+        <p class="task-name">Task: {{ myTask?.name }}</p>
+    </div>
+    <button class="btn back-btn" [routerLink] = "['/list']">Back to Task App</button>
 </div>

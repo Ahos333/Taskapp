@@ -1,16 +1,3 @@
 {
-  "task": [
-    {
-      "id": 1,
-      "name": "Clean"
-    },
-    {
-      "id": 2,
-      "name": "Wash the dishes"
-    },
-    {
-      "id": 3,
-      "name": "Take out trash"
-    }
-  ]
+  "task": []
 }

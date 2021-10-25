@@ -17,7 +17,7 @@ export class NewTaskComponent implements OnInit {
 
   onSubmit() {
     if (!this.name && !this.id) {
-      alert('Please enter a task and its id!');
+      alert('Please enter a task!');
       return;
     }
 

@@ -33,16 +33,5 @@ export class TaskDataService {
     return this.http.post<Task>(this.taskUrl, task, httpOptions);
   }
 
-  editTask(task: Task):Observable<Task> {
-    const url = `${this.taskUrl}/${task.id}`;
-    return this.http.patch<Task>(this.taskUrl, task, httpOptions);
-  }
-
-  /*
-  deleteTask(taskList: Task): Observable<Task> {;
-    return this.http.delete<Task>(this.taskUrl, taskList, httpOptions);
-  }
-  */
-
   constructor( private http: HttpClient) { }
 }
