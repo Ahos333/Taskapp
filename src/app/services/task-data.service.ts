@@ -33,5 +33,15 @@ export class TaskDataService {
     return this.http.post<Task>(this.taskUrl, task, httpOptions);
   }
 
+  editTask(task: Task): Observable<Task> {
+    const url = `${this.taskUrl}/${task.id}`;
+    return this.http.put<Task>(this.taskUrl, task, httpOptions);
+  }
+  /*
+  editTask(task: Task): Observable<Task> {
+    const url = `${this.taskUrl}/${task.id}`;
+    return this.http.delete<Task>(url);
+  }
+  */
   constructor( private http: HttpClient) { }
 }

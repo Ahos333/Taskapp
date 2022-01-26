@@ -31,6 +31,13 @@ export class TaskListComponent implements OnInit {
       );
   }
 
+  editTask(task: Task)  {
+    this.taskData
+      .editTask(task)
+      .subscribe(t => task.id = t.id)
+        /* for function EditTask, the taskList (each task) will be updated.
+        To do that, the user  */
+  }
   ngOnInit() {}
 
   

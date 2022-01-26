@@ -4,9 +4,10 @@
         <app-new-task (onAddTask)="addTask($event)"></app-new-task>
         <ul class="task-list">
             <li *ngFor="let t of taskList">
-                <p class="integer">{{ t.id }}.</p>
-                <a class="name" [routerLink] = "['/details', t.id]">{{ t.name }}</a>
+                    <p class="integer">{{ t.id }}.</p>
+                    <a class="name" [routerLink] = "['/details', t.id]">{{ t.name }}</a>
                 <button class="btn view-btn" [routerLink] = "['/details', t?.id]">View</button>
+                <app-edit-task (click)="editTask(t)">Edit</app-edit-task>
                 <app-delete-btn (click)="deleteTask(t)">Delete</app-delete-btn>
             </li>
         </ul>
